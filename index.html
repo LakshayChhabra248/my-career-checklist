@@ -7,12 +7,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #6a11cb; /* Vibrant Purple */
-            --secondary-color: #2575fc; /* Bright Blue */
-            --accent-color: #ff5f6d; /* Energetic Coral */
-            --completed-color: #28a745; /* Success Green */
+            --primary-color: #6a11cb;
+            --secondary-color: #2575fc;
+            --accent-color: #ff5f6d;
+            --completed-color: #28a745;
             --text-color: #333;
-            --bg-light: #f0f2f5; /* Softer light background */
+            --bg-light: #f0f2f5;
             --bg-white: #ffffff;
             --border-radius-main: 12px;
             --shadow-light: 0 4px 15px rgba(0,0,0,0.08);
@@ -26,15 +26,15 @@
             padding: 0;
             background-color: var(--bg-light);
             color: var(--text-color);
-            overflow-x: hidden; /* Prevent horizontal scroll from animations */
+            overflow-x: hidden;
         }
 
         .container {
             width: 90%;
             max-width: 1300px;
-            margin: 40px auto;
-            padding: 30px;
-            background: linear-gradient(135deg, var(--bg-white) 0%, #e9efff 100%); /* Subtle gradient */
+            margin: 20px auto; /* Reduced top/bottom margin for mobile */
+            padding: 20px;   /* Reduced padding for mobile */
+            background: linear-gradient(135deg, var(--bg-white) 0%, #e9efff 100%);
             box-shadow: var(--shadow-strong);
             border-radius: var(--border-radius-main);
             animation: fadeInPage 0.8s ease-out;
@@ -47,8 +47,8 @@
 
         header {
             text-align: center;
-            margin-bottom: 50px;
-            padding-bottom: 30px;
+            margin-bottom: 30px; /* Reduced */
+            padding-bottom: 20px; /* Reduced */
             border-bottom: 4px solid;
             border-image: linear-gradient(to right, var(--primary-color), var(--secondary-color)) 1;
             animation: slideDownHeader 0.6s ease-out;
@@ -59,7 +59,7 @@
         }
 
         header h1 {
-            font-size: 3em;
+            font-size: 2.2em; /* Reduced */
             font-weight: 700;
             margin-bottom: 8px;
             background: -webkit-linear-gradient(45deg, var(--primary-color), var(--accent-color));
@@ -68,37 +68,34 @@
         }
 
         header p {
-            font-size: 1.2em;
+            font-size: 1em; /* Reduced */
             color: #555;
             font-weight: 300;
         }
 
         .phase {
-            margin-bottom: 60px;
-            padding: 30px;
-            border-left: 6px solid; /* Will be set per phase */
+            margin-bottom: 40px; /* Reduced */
+            padding: 20px; /* Reduced */
+            border-left: 6px solid;
             background-color: var(--bg-white);
             border-radius: var(--border-radius-main);
             box-shadow: var(--shadow-light);
             transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
             animation: fadeInUpSection 0.5s ease-out forwards;
-            opacity: 0; /* Start hidden for animation */
+            opacity: 0;
         }
         
         .phase:nth-child(odd) { border-left-color: var(--primary-color); }
         .phase:nth-child(even) { border-left-color: var(--secondary-color); }
         #ongoing { border-left-color: var(--accent-color); }
 
-
         @keyframes fadeInUpSection {
             from { opacity: 0; transform: translateY(25px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        /* Stagger animation for phases */
         .phase:nth-of-type(1) { animation-delay: 0.2s; }
         .phase:nth-of-type(2) { animation-delay: 0.4s; }
         .phase:nth-of-type(3) { animation-delay: 0.6s; }
-
 
         .phase:hover {
             transform: translateY(-5px);
@@ -106,40 +103,38 @@
         }
 
         .phase h2 {
-            font-size: 2.2em;
+            font-size: 1.8em; /* Reduced */
             font-weight: 600;
-            margin-bottom: 25px;
+            margin-bottom: 20px; /* Reduced */
             display: flex;
             align-items: center;
             position: relative;
+            flex-wrap: wrap; /* Allow title to wrap if too long */
         }
         .phase h2 .phase-icon {
-            margin-right: 18px;
-            font-size: 1.6em;
-            color: inherit; /* Inherits from border color of phase */
+            margin-right: 12px; /* Reduced */
+            font-size: 1.4em; /* Reduced */
         }
-         /* Color phase icons based on their phase color */
         #phase1 h2 .phase-icon { color: var(--primary-color); }
         #phase2 h2 .phase-icon { color: var(--secondary-color); }
         #ongoing h2 .phase-icon { color: var(--accent-color); }
 
-
         .task-group {
-            margin-bottom: 35px;
+            margin-bottom: 25px; /* Reduced */
         }
 
         .task-group h3 {
-            font-size: 1.6em;
+            font-size: 1.3em; /* Reduced */
             font-weight: 600;
-            margin-bottom: 18px;
-            padding-bottom: 10px;
+            margin-bottom: 15px; /* Reduced */
+            padding-bottom: 8px; /* Reduced */
             border-bottom: 2px solid #e0e0e0;
             display: flex;
             align-items: center;
         }
         .task-group h3 .task-icon {
-            margin-right: 12px;
-            color: var(--primary-color); /* Or dynamic based on group */
+            margin-right: 10px; /* Reduced */
+            color: var(--primary-color);
         }
 
         ul.checklist {
@@ -148,16 +143,16 @@
         }
 
         ul.checklist li {
-            background-color: #fdfdff; /* Slightly off-white */
-            margin-bottom: 15px;
-            padding: 18px 25px;
+            background-color: #fdfdff;
+            margin-bottom: 12px; /* Reduced */
+            padding: 15px 20px; /* Reduced */
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
             display: flex;
             align-items: center;
             transition: all 0.3s ease-in-out;
-            position: relative; /* For pseudo-elements */
-            overflow: hidden; /* For checked animation */
+            position: relative;
+            overflow: hidden;
         }
 
         ul.checklist li:hover {
@@ -166,12 +161,13 @@
         }
 
         ul.checklist li input[type="checkbox"] {
-            appearance: none; /* Remove default appearance */
-            width: 22px;
-            height: 22px;
+            appearance: none;
+            min-width: 20px; /* Ensure checkbox is tappable */
+            width: 20px;   /* Reduced */
+            height: 20px;  /* Reduced */
             border: 2px solid var(--secondary-color);
             border-radius: 5px;
-            margin-right: 18px;
+            margin-right: 15px; /* Reduced */
             cursor: pointer;
             position: relative;
             outline: none;
@@ -184,8 +180,8 @@
         }
 
         ul.checklist li input[type="checkbox"]:checked::before {
-            content: '✔'; /* Checkmark */
-            font-size: 16px;
+            content: '✔';
+            font-size: 14px; /* Reduced */
             color: white;
             position: absolute;
             top: 50%;
@@ -198,18 +194,19 @@
             flex-grow: 1;
             cursor: pointer;
             transition: color 0.3s ease, text-decoration 0.3s ease;
-            position: relative; /* For strikethrough animation */
+            position: relative;
+            font-size: 0.95em; /* Slightly reduced for mobile */
         }
         
         ul.checklist li input[type="checkbox"]:checked + label {
-            color: #777; /* Dim text */
+            color: #777;
         }
 
         ul.checklist li input[type="checkbox"]:checked + label::after {
             content: '';
             position: absolute;
             top: 50%;
-            left: -2%; /* Start slightly to the left */
+            left: -2%;
             width: 0%;
             height: 2px;
             background-color: var(--completed-color);
@@ -218,28 +215,29 @@
         }
 
         @keyframes strikeThrough {
-            to { width: 104%; } /* Extend slightly past text */
+            to { width: 104%; }
         }
-
 
         .timeline {
             font-style: normal;
             font-weight: 600;
             color: var(--accent-color);
-            font-size: 0.85em;
+            font-size: 0.8em; /* Reduced */
             margin-left: 8px;
-            background-color: #ffebee; /* Light accent background */
+            background-color: #ffebee;
             padding: 2px 6px;
             border-radius: 4px;
+            display: inline-block; /* Better for wrapping */
+            margin-top: 5px; /* Add space if phase title wraps */
         }
 
         .priority-tag {
             background-color: var(--accent-color);
             color: white;
-            padding: 4px 10px;
-            border-radius: 15px; /* Pill shape */
-            font-size: 0.8em;
-            margin-left: 10px;
+            padding: 3px 8px; /* Reduced */
+            border-radius: 15px;
+            font-size: 0.75em; /* Reduced */
+            margin-left: 8px; /* Reduced */
             font-weight: 600;
             box-shadow: 0 2px 5px rgba(255,95,109,0.3);
         }
@@ -248,8 +246,8 @@
             width: 100%;
             background-color: #e9ecef;
             border-radius: 25px;
-            margin-top: 20px;
-            height: 16px; /* Thicker progress bar */
+            margin-top: 15px; /* Reduced */
+            height: 14px; /* Reduced */
             overflow: hidden;
             box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
         }
@@ -257,37 +255,172 @@
         .progress-bar {
             width: 0%;
             height: 100%;
-            background: linear-gradient(to right, var(--completed-color), #84e184); /* Gradient progress */
+            background: linear-gradient(to right, var(--completed-color), #84e184);
             border-radius: 25px;
             text-align: right;
-            padding-right: 10px; /* For text if added */
-            line-height: 16px;
+            padding-right: 8px; /* Reduced */
+            line-height: 14px; /* Adjusted */
             color: white;
-            font-size: 0.8em;
+            font-size: 0.75em; /* Reduced */
             font-weight: 600;
-            transition: width 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); /* Smoother bezier curve */
+            transition: width 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
         }
 
         footer {
             text-align: center;
-            margin-top: 60px;
-            padding: 25px;
+            margin-top: 40px; /* Reduced */
+            padding: 20px; /* Reduced */
             background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
             color: #fff;
             border-radius: 0 0 var(--border-radius-main) var(--border-radius-main);
-            animation: fadeInUpSection 0.5s ease-out 0.8s forwards; /* Delay footer animation */
-             opacity: 0;
+            animation: fadeInUpSection 0.5s ease-out 0.8s forwards;
+            opacity: 0;
         }
         footer p {
             margin: 0;
-            font-size: 1.1em;
+            font-size: 1em; /* Reduced */
             font-weight: 600;
         }
-        footer p::before {
-            content: "🚀 ";
+        footer p::before { content: "🚀 "; }
+        footer p::after { content: " ✨"; }
+
+        /* ------------------------- */
+        /* --- MEDIA QUERIES --- */
+        /* ------------------------- */
+
+        /* For Tablets and Smaller Desktops */
+        @media (max-width: 1024px) {
+            .container {
+                width: 95%;
+                padding: 20px 15px;
+            }
+            header h1 {
+                font-size: 2.5em;
+            }
+            .phase h2 {
+                font-size: 1.9em;
+            }
+            .task-group h3 {
+                font-size: 1.4em;
+            }
         }
-         footer p::after {
-            content: " ✨";
+
+        /* For Smaller Tablets and Large Phones */
+        @media (max-width: 768px) {
+            .container {
+                margin: 15px auto;
+                padding: 15px;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 0.95em;
+            }
+            .phase {
+                padding: 15px;
+                margin-bottom: 30px;
+            }
+            .phase h2 {
+                font-size: 1.6em; /* Further reduce phase title */
+                margin-bottom: 15px;
+            }
+            .phase h2 .phase-icon {
+                font-size: 1.3em;
+                margin-right: 10px;
+            }
+            .task-group h3 {
+                font-size: 1.2em; /* Further reduce task group title */
+                margin-bottom: 12px;
+            }
+            ul.checklist li {
+                padding: 12px 15px; /* Reduce padding in list items */
+            }
+            ul.checklist li label {
+                font-size: 0.9em; /* Reduce label font size */
+            }
+            .timeline, .priority-tag {
+                font-size: 0.7em; /* Make tags smaller */
+                padding: 2px 5px;
+            }
+            .progress-bar-container {
+                height: 12px;
+            }
+            .progress-bar {
+                line-height: 12px;
+                font-size: 0.7em;
+            }
+            footer p {
+                font-size: 0.9em;
+            }
+        }
+
+        /* For Most Mobile Phones */
+        @media (max-width: 480px) {
+            body {
+                line-height: 1.6; /* Slightly adjust line height for small screens */
+            }
+            .container {
+                margin: 10px auto;
+                padding: 10px;
+                border-radius: 8px; /* Slightly smaller radius */
+            }
+            header {
+                margin-bottom: 20px;
+                padding-bottom: 15px;
+            }
+            header h1 {
+                font-size: 1.8em; /* Smallest header */
+            }
+            header p {
+                font-size: 0.85em;
+            }
+            .phase {
+                padding: 10px;
+                border-left-width: 4px; /* Thinner border */
+                margin-bottom: 25px;
+            }
+            .phase h2 {
+                font-size: 1.4em;
+            }
+             .phase h2 .timeline { /* Ensure timeline wraps nicely */
+                display: block;
+                margin-left: 0;
+                margin-top: 5px;
+                width: fit-content;
+            }
+            .task-group h3 {
+                font-size: 1.1em;
+            }
+            ul.checklist li input[type="checkbox"] {
+                min-width: 18px;
+                width: 18px;
+                height: 18px;
+                margin-right: 10px;
+            }
+            ul.checklist li input[type="checkbox"]:checked::before {
+                font-size: 12px;
+            }
+            ul.checklist li label {
+                font-size: 0.85em;
+            }
+            .priority-tag {
+                margin-left: 5px;
+                padding: 2px 6px;
+            }
+             .progress-bar-container {
+                height: 10px;
+            }
+            .progress-bar {
+                line-height: 10px;
+                font-size: 0.65em;
+            }
+            footer {
+                padding: 15px;
+            }
+            footer p {
+                font-size: 0.8em;
+            }
         }
 
     </style>
